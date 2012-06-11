@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A9377D6C-6A9B-432F-8100-7C2EA0E35C95}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RSEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>External\Effects11\Inc;External\FMOD\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>External\Effects11;External\FMOD\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>External\FMOD\inc;External\Effects11\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>External\FMOD\lib;External\Effects11;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>fmodex_vc.lib;lua.lib;D3DX11Effects.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>fmodex_vc.lib;lua.lib;D3DX11Effects.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Arena.cpp" />
+    <ClCompile Include="BSTestGS.cpp" />
+    <ClCompile Include="BSTestPS.cpp" />
+    <ClCompile Include="BSTestVS.cpp" />
+    <ClCompile Include="BulletStorm.cpp" />
+    <ClCompile Include="BulletStormTest.cpp" />
+    <ClCompile Include="BulletStrip.cpp" />
+    <ClCompile Include="ColorRenderBuffer.cpp" />
+    <ClCompile Include="D3DXUtils.cpp" />
+    <ClCompile Include="fontclass.cpp" />
+    <ClCompile Include="fontshaderclass.cpp" />
+    <ClCompile Include="FurMain.cpp" />
+    <ClCompile Include="GameGlobalData.cpp" />
+    <ClCompile Include="GameLogic.cpp" />
+    <ClCompile Include="GaussianMain.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="BulletSystem.cpp" />
+    <ClCompile Include="LightningMain.cpp" />
+    <ClCompile Include="LightningRenderer.cpp" />
+    <ClCompile Include="LightningSeed.cpp" />
+    <ClCompile Include="LuaUtils.cpp" />
+    <ClCompile Include="PathLightning.cpp" />
+    <ClCompile Include="PerlinFire.cpp" />
+    <ClCompile Include="RSObjPS.cpp" />
+    <ClCompile Include="RSObjVS.cpp" />
+    <ClCompile Include="RSTimer.cpp" />
+    <ClCompile Include="SoftParticles.cpp" />
+    <ClCompile Include="SoundClass.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="SpaceshipModel.cpp" />
+    <ClCompile Include="SpriteClass.cpp" />
+    <ClCompile Include="CameraClass.cpp" />
+    <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="ComputeShaderClass.cpp" />
+    <ClCompile Include="GeometryShaderClass.cpp" />
+    <ClCompile Include="ObjLoader.cpp" />
+    <ClCompile Include="ObjModelClass.cpp" />
+    <ClCompile Include="PixelShaderClass.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
+    <ClCompile Include="RenderObjectManager.cpp" />
+    <ClCompile Include="ShaderClass.cpp" />
+    <ClCompile Include="D3DClass.cpp" />
+    <ClCompile Include="EngineMain.cpp" />
+    <ClCompile Include="GraphicsClass.cpp" />
+    <ClCompile Include="InputClass.cpp" />
+    <ClCompile Include="ModelClass.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="AudioClass.cpp" />
+    <ClCompile Include="SpherePS.cpp" />
+    <ClCompile Include="SphereTexture.cpp" />
+    <ClCompile Include="SphereVS.cpp" />
+    <ClCompile Include="SpritePS.cpp" />
+    <ClCompile Include="SpriteVS.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="textclass.cpp" />
+    <ClCompile Include="TokenStream.cpp" />
+    <ClCompile Include="SystemClass.cpp" />
+    <ClCompile Include="TextureClass.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="VertexShaderClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arena.h" />
+    <ClInclude Include="BSTestGS.h" />
+    <ClInclude Include="BSTestPS.h" />
+    <ClInclude Include="BSTestVS.h" />
+    <ClInclude Include="BulletStorm.h" />
+    <ClInclude Include="BulletStormTest.h" />
+    <ClInclude Include="BulletStrip.h" />
+    <ClInclude Include="ColorRenderBuffer.h" />
+    <ClInclude Include="D3DXUtils.h" />
+    <ClInclude Include="EffectVariable.h" />
+    <ClInclude Include="fontclass.h" />
+    <ClInclude Include="fontshaderclass.h" />
+    <ClInclude Include="FurMain.h" />
+    <ClInclude Include="GameGlobalData.h" />
+    <ClInclude Include="GameLogic.h" />
+    <ClInclude Include="GaussianMain.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="LightningMain.h" />
+    <ClInclude Include="LightningRenderer.h" />
+    <ClInclude Include="LightningSeed.h" />
+    <ClInclude Include="LuaUtils.h" />
+    <ClInclude Include="lua_head.h" />
+    <ClInclude Include="BulletSystem.h" />
+    <ClInclude Include="PathLightning.h" />
+    <ClInclude Include="PerlinFire.h" />
+    <ClInclude Include="RSObjPS.h" />
+    <ClInclude Include="RSObjVS.h" />
+    <ClInclude Include="RSTimer.h" />
+    <ClInclude Include="SoftParticles.h" />
+    <ClInclude Include="SoundClass.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Spaceship.h" />
+    <ClInclude Include="SpaceshipModel.h" />
+    <ClInclude Include="SpriteClass.h" />
+    <ClInclude Include="CameraClass.h" />
+    <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="ComputeShaderClass.h" />
+    <ClInclude Include="GeometryShaderClass.h" />
+    <ClInclude Include="ObjLoader.h" />
+    <ClInclude Include="ObjModelClass.h" />
+    <ClInclude Include="PixelShaderClass.h" />
+    <ClInclude Include="RenderObject.h" />
+    <ClInclude Include="RenderObjectManager.h" />
+    <ClInclude Include="ShaderClass.h" />
+    <ClInclude Include="D3DClass.h" />
+    <ClInclude Include="GraphicsClass.h" />
+    <ClInclude Include="InputClass.h" />
+    <ClInclude Include="ModelClass.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="AudioClass.h" />
+    <ClInclude Include="SpherePS.h" />
+    <ClInclude Include="SphereTexture.h" />
+    <ClInclude Include="SphereVS.h" />
+    <ClInclude Include="SpritePS.h" />
+    <ClInclude Include="SpriteVS.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="textclass.h" />
+    <ClInclude Include="TokenStream.h" />
+    <ClInclude Include="Structures.h" />
+    <ClInclude Include="SystemClass.h" />
+    <ClInclude Include="TextureClass.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VertexShaderClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bstest.hlsl" />
+    <None Include="BulletStorm.hlsl" />
+    <None Include="Color.ps" />
+    <None Include="Color.vs" />
+    <None Include="font.ps" />
+    <None Include="font.vs" />
+    <None Include="FurShellsAndFins.hlsl" />
+    <None Include="gaussian_color_cs.hlsl" />
+    <None Include="gaussian_vs_ps.hlsl" />
+    <None Include="Imaging.hlsl" />
+    <None Include="Lightning.hlsl" />
+    <None Include="MainEffect.hlsl" />
+    <None Include="PerlinFire.hlsl" />
+    <None Include="rsobjtest.hlsl" />
+    <None Include="SoftParticles.hlsl" />
+    <None Include="Sphere.fx" />
+    <None Include="Sprite.fx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
